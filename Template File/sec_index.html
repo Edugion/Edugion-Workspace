@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chat Bot</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+  <link rel="stylesheet" href="../landing_page/style.css">
+  <link rel="stylesheet" href="../landing_page/chat.css">
+  <script src="https://kit.fontawesome.com/91a7ea1212.js" crossorigin="anonymous"></script>
+  <title>Chat Window</title>
+</head>
+<body>
+
+
+<section>
+  <h1>Chat Popup</h1>
+  <p>Click on the chat button to start chatting</p>
+
+  <button class="chat-btn">
+    <i class="material-icons"> comment </i>
+  </button>
+
+  <div class="chat-popup">
+      <!-- Message Container -->
+      <div class="chat-container">
+        <!-- Messages -->
+        <div id="chatbox">
+          <h5 id="chat-timestamp"></h5>
+          <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+        </div>
+        <!-- User input box -->
+        <div class="chat-bar-input-block">
+          <div id="userInput">
+            <input id="textInput" class="input-box" type="text" name="msg"
+                   placeholder="Tap 'Enter' to send a message">
+            <p></p>
+          </div>
+          <div class="chat-bar-icons">
+            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+               onclick="heartButton()"></i>
+            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+               onclick="sendButton()"></i>
+          </div>
+        </div>
+        <div id="chat-bar-bottom">
+          <p></p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../landing_page/script.js"></script>
+<script src="../landing_page/chat.js"></script>
+<script src="../landing_page/responses.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      /* Style the buttons */
+      .btn {
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+          font-size: 18px;
+      }
+
+      /* Style the active class, and buttons on mouse-over */
+      .active, .btn:hover {
+          background-color: #0B2445;
+          color: white;
+      }
+      .hidden {
+          visibility: hidden;
+          display: none;
+      }
+  </style>
+</head>
+<body>
+
+<h1>Active Button</h1>
+<p>Highlight the active/current (pressed) button.</p>
+
+<div id="myDIV">
+  <button class="btn">1</button>
+  <button class="btn">2</button>
+  <button class="btn">3</button>
+  <button class="btn active">4</button>
+  <button class="btn">5</button>
+</div>
+
+<br>
+
+<div id="dialog">
+  <form>
+    <select id="form_type">
+      <option data-show="type_0" selected>Show 0</option>
+      <option data-show="type_1">Show 1</option>
+    </select>
+    <div data-visible="type_0">
+      <input type="text" value="im visibible for show_0" />
+    </div>
+    <div data-visible="type_1" class="hidden">
+      <input type="text" value="im visibible for show_1" disabled />
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    // Add active class to the current button (highlight it)
+    const header = document.getElementById("myDIV");
+    const btns = header.getElementsByClassName("btn");
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
+    $('#form_type').on('change', function() {
+
+        var self = $(this),
+            selectedOption = self.find('option:selected'),
+            showId = selectedOption.data("show"),
+            parentForm = self.closest('form'),
+            $el = parentForm.find('[data-visible="' + showId + '"]');
+
+        parentForm.find('[data-visible]').not($el).addClass('hidden').find('input').prop('disabled', true);
+
+
+        $el.removeClass('hidden')
+            .find('input').prop('disabled', false);
+
+    });
+</script>
+
+</body>
+</html>

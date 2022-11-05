@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chat.css">
+  <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+      h1,button {font-family: "Montserrat", sans-serif}
+      .column {
+          float: left;
+          width: 33%;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+
+<!-- Zeroth Grid -->
+<div class = "blocking" style = "background-color:#0B2445;" id="intro">
+  <div class="video-site" style="float: right;">
+    <img width="720" height="500" style="object-fit: cover" src="../../Picture/office_worker.webp" alt="Video Picture">
+  </div>
+  <div class = "description" style = "background-color:#0B2445; float: left; left: 100px; top: 80px">
+    <h2 class="bigfont">Questions that defines you better</h2>
+    <p class = "smallfont" style="color: #E9F0FF">Our mission is to create a job site that gives a chance for job seeker
+    to express themselves further than just education and work experience. Apart from a personal video that allow a self-expression beyond the work,
+    we achieve this by forming a questionnaire that could pull your abilities within a few questions.</p>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class = "blocking" style = "background-color:#e9f0ff;">
+  <!--  <h4 class = "VideoFont">Be Creative!!</h4>-->
+  <div class="video-site" style = "float: left; top: 30px; left: 100px">
+    <img width="535" height="467" style="object-fit: cover" src="../../Picture/topics.png">
+  </div>
+  <div class = "description" style="right: 100px">
+    <h2 class="bigfont" style="color: black">Created to cover a wide range of skills</h2>
+    <p class = "smallfont"> We started with research on the important areas for professional improvement at work from
+      several resources -- professional consult and website included. We then aggregate areas that are unanimously suggested
+      by most resources. Some topics could be seen on the left side. Then, our subject-matter experts develop the questions
+      specifically for each skill, and peer-reviewed by other experts to ensure its effectiveness. Our questionnaire contains
+      both closed-ended and open-ended question for flexibility of users.</p>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class = "blocking" style = "background-color:paleturquoise;" id="extra">
+  <br>
+  <h2 class="bigfont" style="color: black">Instruction for answering the question</h2>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"src="../../Picture/step_questionnaire.png">
+</div>
+
+<!--<div class = "blocking" style = "background-color:peachpuff;" id="nudge">-->
+<!--  <h2 class="bigfont" style="color: black;"> Sneak Peak on our question</h2>-->
+<!--  <p class = "smallfont"> Here are some example of the question we ask in the questionnaire. We'll give both closed-ended and opened-ended question on three main areas. </p>-->
+<!--  <ol>-->
+<!--    <li class="smallfont">Time Management</li>-->
+<!--    <ul>-->
+<!--      <li class="smallfont">What productivity tools do you use?</li>-->
+<!--      <li class="smallfont">How would you prioritize your duties when asked for extra responsibilities?</li>-->
+<!--    </ul>-->
+<!--    <li class="smallfont">Leadership</li>-->
+<!--    <ul>-->
+<!--      <li class="smallfont">What kind of example do you set for your team members?</li>-->
+<!--      <li class="smallfont">If you are assigned as a leader of a project, what will be the first thing you do on your team</li>-->
+<!--    </ul>-->
+<!--    <li class="smallfont">Communication</li>-->
+<!--    <ul>-->
+<!--      <li class="smallfont">What is your definition of strong communication?</li>-->
+<!--      <li class="smallfont">Do you prefer written or verbal communication?</li>-->
+<!--    </ul>-->
+<!--  </ol>-->
+<!--</div>-->
+
+<div class="row" style="background-color: peachpuff;">
+  <br><br>
+  <h2 class="bigfont" style="color: black;"> Sneak Peak on our question</h2>
+  <p class = "smallfont"> Here are some example of the question we ask in the questionnaire. We'll give both closed-ended and opened-ended question on three main areas. </p>
+  <div class="column">
+    <h2 class="bigfont" style="color: black">Time Management</h2>
+    <ul>
+      <li class="smallfont">What productivity tools do you use?</li>
+      <li class="smallfont">How would you prioritize your duties when asked for extra responsibilities?</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h2 class="bigfont" style="color: black">Leadership</h2>
+    <ul>
+      <li class="smallfont">What kind of example do you set for your team members?</li>
+      <li class="smallfont">If you are assigned as a leader of a project, what will be the first thing you do on your team</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h2 class="bigfont" style="color: black">Communication</h2>
+    <ul>
+      <li class="smallfont">What is your definition of strong communication?</li>
+      <li class="smallfont">Do you prefer written or verbal communication?</li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+</body>
+</html>

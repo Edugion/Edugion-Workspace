@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Flat Design Login Form Example</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            background-color: #e9f0ff;
+        }
+        h2 {
+            font-family: Sarabun;
+        }
+        .form {
+            position: relative;
+            z-index: 1;
+            /*Shifts form downwards*/
+            top: 120px;
+            background: whitesmoke;
+            /* makes it less of a rectangle and add curves to side*/
+            border-radius: 30px;
+            max-width: 400px;
+            margin: 0 auto 100px;
+            /*Makes box bigger*/
+            padding: 120px;
+            text-align: center;
+            left: 10px;
+            /*creates box around the form*/
+            box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+        .form button {
+            font-family: “Poppins”, sans-serif;
+            text-transform: uppercase;
+            background: #0B2445;
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+            padding: 15px;
+            /*color of words in button*/
+            color: #FFFFFF;
+            font-size: 20px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+        /*For Who are you page, when press on button, buttons are green*/
+        .form button:hover,.form button:active,.form button:focus {
+            background: #43A047;
+        }
+    </style>
+    <script type="text/javascript">
+        function form_click(x) {
+            const action = document.getElementsByTagName("option")[x].value;
+            if (action !== "") {
+                document.getElementById("form_id").action = action;
+                document.getElementById("form_id").submit();
+            } else {
+                alert("Set form action");
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="header" style="display: flex; justify-content: center">
+    <img src="../../Picture/edugion-removebg-preview.png" alt=“logo”/>
+</div>
+<div class="form">
+    <form class="job-choice-form">
+        <h2 class="txtcontainer" style="font-size: 50px;"><b>Who are you?</b></h2><br>
+        <button id="companies" onclick="location.href">Companies</button><br><br>
+        <button href="#" id="recruiters" onclick="form_click()">Recruiters</button><br><br>
+        <button href="#" id="jobseekers" onclick="form_click()">Job Seekers</button><br><br>
+    </form>
+    <!--<form class=“type-choice-form”>
+        <h2 class=“txtcontainer”><b>What type of jobs are you looking for?</b></h2><br>
+        <button href=“#” id=“parttime”>Part-Time Jobs</button><br><br>
+        <button href=“#” id=“fulltime”>Full-Time Jobs</button><br><br>
+        <button href=“#” id=“transitioning”>Transitioning</button><br><br>
+        <button href=“#” id=“interns”>Interns</button><br><br>
+    </form>
+-->
+</div>
+</body>
+</html>

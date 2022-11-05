@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chat.css">
+  <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+      h1,button {font-family: "Montserrat", sans-serif}
+      .hidden {
+          visibility: hidden;
+          display: none;
+      }
+  </style>
+  <script>
+      // Add active class to the current button (highlight it)
+      $('#form_type').on('change', function() {
+
+          const self = $(this),
+              selectedOption = self.find('option:selected'),
+              showId = selectedOption.data("show"),
+              parentForm = self.closest('form'),
+              $el = parentForm.find('[data-visible="' + showId + '"]');
+
+          parentForm.find('[data-visible]').not($el).addClass('hidden').find('input').prop('disabled', true);
+
+
+          $el.removeClass('hidden')
+              .find('input').prop('disabled', false);
+
+      });
+  </script>
+</head>
+<body>
+
+<header>
+  <img src="../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+
+<!-- Zeroth Grid -->
+<div class = "blocking" style = "background-color:#0B2445;" id="intro">
+  <div class="video-site" style="float: right;">
+    <img width="720" height="500" style="object-fit: cover" src="../../Picture/office_worker.webp" alt="Video Picture">
+  </div>
+  <div class = "description" style = "background-color:#0B2445; float: left; left: 100px; top: 80px">
+    <h2 class="bigfont">Edugion and the importance of media that we see</h2>
+    <p class = "smallfont" style="color: #E9F0FF">As Edugion desires to create a job site that everyone could pursue their
+    dream companies, we view that enhancing candidate's skills, both soft skills and hard skills, is an important
+    function to make this goal more intact. Although several education channels exist in many job portal by now, most of them
+    focus only courses to provide the education for candidates, while in fact other channels such as news or events
+    are equally important. This leads to us to combine several channel together in one site</p>
+  </div>
+</div>
+
+<!-- First Grid -->
+
+<div class = "blocking" style = "background-color:#e9f0ff; height: 1000px" id="choices">
+    <!--  <h4 class = "VideoFont">Be Creative!!</h4>-->
+    <br>
+    <h2 class="bigfont" style="color: black">What channel do we have</h2>
+    <form>
+      <div id="myDIV" class="video-site-button" style = "float: left; top: 30px; left: 100px">
+      <div class="it_tab_link">
+        <div class="it_tab_description">
+          <h3>News RSS</h3>
+          <p>a web feed that allows users and applications to access
+            updates to websites in a standardized, computer-readable format.</p>
+        </div>
+      </div>
+      <div class="it_tab_link">
+        <div class="it_tab_description">
+          <h3>Events</h3>
+          <p>a web feed that allows users and applications to access
+            updates to websites in a standardized, computer-readable format.</p>
+        </div>
+      </div>
+      <div class="it_tab_link">
+        <div class="it_tab_description">
+          <h3>Industry Associations</h3>
+          <p>a web feed that allows users and applications to access
+            updates to websites in a standardized, computer-readable format.</p>
+        </div>
+      </div>
+      <div class="it_tab_link">
+        <div class="it_tab_description">
+          <h3>Industry Media</h3>
+          <p>a web feed that allows users and applications to access
+            updates to websites in a standardized, computer-readable format.</p>
+        </div>
+      </div>
+      <div class="it_tab_link">
+        <div class="it_tab_description">
+          <h3>Courses</h3>
+          <p>a web feed that allows users and applications to access
+            updates to websites in a standardized, computer-readable format.</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+</body>
+</html>
