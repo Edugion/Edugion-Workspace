@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="../../landing_page/style.css">
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="../adults/chart1.js"></script>
+  <style>
+      body {
+          line-height: 1.5;
+          min-height: 100vh;
+          font-family: "Be Vietnam Pro", sans-serif;
+          background-color: #0B2445;
+          color: var(--c-text-primary);
+      }
+  </style>
+</head>
+<body>
+<header>
+  <img src="../../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+<div class="app-body">
+  <div class="app-body-navigation">
+    <nav class="navigation">
+      <a href="#">
+        <i class="fa fa-object-group" aria-hidden="true"></i>
+        <span>General Dashboard</span>
+      </a>
+      <a href="../analytics_specific_dashboard.html">
+        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+        <span>Field Dashboard</span>
+      </a>
+      <a href="../analytics_compare.html">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        <span>Compare Dashboard</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <span>Add analytics</span>
+      </a>
+    </nav>
+  </div>
+  <div class="app-body-main-content">
+    <h3 class="bigfont"> Analytics for "Name" : College Students </h3>
+    <div class = "blocking" style = "background-color: white; height: 80px;" id="nudge">
+      <br>
+      <p class="smallfont" style="color: black; font-weight: bolder; display: inline-block"> Filter by :</p>
+      <select style="display: inline-block">
+        <option id="daily">Daily</option>
+        <option id="monthly">Monthly</option>
+        <option id="yearly">Yearly</option>
+      </select>
+    </div>
+    <div class="sub-tiles">
+      <article class="tile" style="min-height: 100px;">
+        <div class="tile-header">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <h3>
+            <span>Profile Viewed</span>
+            <span>60</span>
+          </h3>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 100px;">
+        <div class="tile-header">
+          <h3>
+            <span>Post Impression</span>
+            <span>150</span>
+          </h3>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 100px;">
+        <div class="tile-header">
+          <h3>
+            <span>Search Appearance</span>
+            <span>49</span>
+          </h3>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 100px;">
+        <div class="tile-header">
+          <h3>
+            <span>Last Updated the profile</span>
+            <span>May 17</span>
+          </h3>
+        </div>
+      </article>
+    </div>
+    <div class="tiles">
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Score of videos</span>
+            <span>51</span>
+          </h3>
+          <div id="chartContainer" style="height: 180px; width: 90%; right: 90px"></div>
+        </div>
+        <br>
+        <a href="#" style="display: flex; justify-content: center">How to improve</a>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>No. of Question Answered</span>
+            <span>3</span>
+          </h3>
+          <div id="chartContainer2" style="height: 180px; width: 90%;"></div>
+        </div>
+        <br>
+        <a href="#" style="display: flex; justify-content: center">How to improve</a>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <div id="chartContainer3" style="height: 230px; width: 100%;"></div>
+        </div>
+        <br>
+        <a href="../../landing_page/chatbox.html" style="display: flex; justify-content: center">Go to chat</a>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Industrial Certificate</span>
+            <span></span>
+          </h3>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+</body>
+</html>

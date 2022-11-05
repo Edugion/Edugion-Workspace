@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="../landing_page/style.css">
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="chart2.js"></script>
+  <style>
+      body {
+          line-height: 1.5;
+          min-height: 100vh;
+          font-family: "Be Vietnam Pro", sans-serif;
+          background-color: #0B2445;
+          color: var(--c-text-primary);
+      }
+  </style>
+</head>
+<!--
+Video Score : Shouldn't have
+Course : Shouldn't have
+Question : May not be coherent to use graph?
+
+
+- Maybe making the dashboard more aligned by making the companies could see vs just you could see
+- Creating a better graph for some data
+- Comparison Dashboard
+- Additional for the courses?
+-->
+<body>
+<header>
+  <img src="../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+<div class="app-body">
+  <div class="app-body-navigation">
+    <nav class="navigation">
+      <a href="adults/analytics_dashboard_adult.html">
+        <i class="fa fa-object-group" aria-hidden="true"></i>
+        <span>General Dashboard</span>
+      </a>
+      <a href="analytics_specific_dashboard.html">
+        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+        <span>Field Dashboard</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        <span>Compare Dashboard</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <span>Add analytics</span>
+      </a>
+    </nav>
+  </div>
+  <div class="app-body-main-content">
+    <h3 class="bigfont">Dashboard Comparison (Student Version)</h3>
+    <br>
+    <div class = "blocking" style = "background-color: white; height: 80px;" id="nudge">
+      <br>
+      <p class="smallfont" style="color: black; font-weight: bolder; display: inline-block"> Select the majors : </p>
+      <select style="display: inline-block">
+        <option id="CS">Computer Science</option>
+        <option id="Accounting">Accounting</option>
+        <option id="Engineering">Engineering</option>
+      </select>
+      <p class="smallfont" style="color: black; font-weight: bolder; display: inline-block"> Compare to : </p>
+      <select style="display: inline-block">
+        <option id="student">Student at university A</option>
+        <option id="intern1">Interns at Company B</option>
+        <option id="intern2">Interns at Company C</option>
+        <option id="achieve1">Students with the certificate X</option>
+        <option id="achieve2">Students with the certificate Y</option>
+      </select>
+    </div>
+    <br>
+    <div class = "blocking" style = "background-color: white; height: 240px; border-radius: 8px;" id="nudge2">
+      <div class="tile-header" style="color: black">
+        <h3>
+          <span>Total Score</span>
+          <span>64</span>
+        </h3>
+        <div id="chaContainer" style="height: 180px; width: 90%; right: 90px"></div>
+      </div>
+    </div>
+    <div class="tiles">
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Metrics 1</span>
+            <span>XX</span>
+          </h3>
+          <div id="chaContainer2" style="height: 180px; width: 90%; right: 90px"></div>
+          <button onclick="location.href = 'specific_improvement.html'"> How to improve </button>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Metrics 2</span>
+            <span>XX</span>
+          </h3>
+          <div id="chaContainer3" style="height: 180px; width: 90%;"></div>
+          <button onclick="location.href = 'specific_improvement.html'"> How to improve </button>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Metrics 3</span>
+            <span>XX</span>
+          </h3>
+          <div id="chaContainer4" style="height: 230px; width: 100%;"></div>
+          <button onclick="location.href = 'specific_improvement.html'"> How to improve </button>
+        </div>
+      </article>
+      <article class="tile" style="min-height: 200px;">
+        <div class="tile-header">
+          <h3>
+            <span>Metrics 4</span>
+            <span>XX</span>
+          </h3>
+          <div id="chaContainer5" style="height: 230px; width: 100%;"></div>
+          <button onclick="location.href = 'specific_improvement.html'"> How to improve </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+</body>
+</html>

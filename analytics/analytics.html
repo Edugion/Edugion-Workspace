@@ -1,0 +1,119 @@
+<!--The next section to work on is the ‘analytics’.
+Meaning, we’re displaying a lot of analytics for the job seeker which will keep them encouraged to keep their profile
+enhanced, development, growing.
+These analytics will show the job seeker their rate of success, see their rate compared to those others
+who are getting the same materials, doing the same thing, and for companies to see how the job seeker is doing.
+It’d be great to see how this area is both talked about and designed.
+Perhaps then you could work on the Company Profile - what will the page look like once a company  logs in.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics Page</title>
+  <script type="text/javascript" src="adults/chart1.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <link rel="stylesheet" href="../landing_page/style.css">
+  <style>
+      body {
+          background-color: #C9BBC8;
+      }
+      .blocking {
+          height: 400px;
+          text-align: left;
+          left: 50px
+      }
+      select { vertical-align: bottom }
+  </style>
+  <script>
+      function changeNumber() {
+          const foo = document.getElementById("choice-field");
+          foo.onchange = function() {
+              if (foo.value === "finance") {
+                  document.getElementById("number_per").innerHTML = "57%";
+              } else if (foo.value === "computer") {
+                  document.getElementById("number_per").innerHTML = "49%";
+              } else if (foo.value === "market") {
+                  document.getElementById("number_per").innerHTML = "78%";
+              } else if (foo.value === "statistics") {
+                  document.getElementById("number_per").innerHTML = "60%";
+              } else if (foo.value === "mathematics") {
+                  document.getElementById("number_per").innerHTML = "81%";
+              } else {
+                  document.getElementById("number_per").innerHTML = "";
+              }
+          }
+      }
+  </script>
+</head>
+<body>
+<header>
+  <img src="../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+  <h3 class="bigfont"> Welcome Back, Name... </h3>
+  <div class = "blocking" style = "background-color:white; border-radius: 30px; width: 95%;" id="overall">
+      <div class="video-site" id="chartContainer" style="height: 300px; width: 40%; float: right; right: 90px; top: 40px"></div>
+    <div class = "description" style = "background-color:white; float: left; left: 120px">
+      <p class = "smallfont" style="color: black"> Your profile is </p>
+      <h2 class= "bigfont" style="color: black"><span class="animnum">66</span>%</h2>
+      <p class = "smallfont" style="color: black"> better compared to average</p>
+    </div>
+  </div>
+  <br>
+  <!--
+    Making a choice on what specific : Most specification <PSYCHOLOGICAL>
+    - "KEEP ON ENHANCING THEM" (Gamification?)
+    - Their successfulness : Question they need to answer
+      -> Charge to answer more (Lead an initiation) :
+      => Number of question answered
+          -> Globally/Local??
+          -> Fields/Skills
+      => The number of RSS Feed read
+          -> How much they complete
+          -> Mean of the completeness (If they read less, it tells more)
+      => The number of videos
+      => "ADD THE CHAT BOT" :
+        -> If they read "Authentic <Think about the limitation later>"
+            -> Open the chat of that feed to "talk with others"
+            -> Analyze the engagement in the chat <Change in behavior> = **Network**
+        -> Check the "CHEAT SITUATION" : Read time
+        -> Percentage of people who
+    - Newspaper : The most important is on the left!!
+    - Success = 0.2 * Number of question + ...
+
+    **
+    - Probably make the personalized notion of each user
+      - seasonal, interns, ...
+      - The same for full-time/ part-time
+    - Marking that what could you improve the profile -> Mark after the analytics number
+    - Videos : Using the image processing - CV ways
+    - Give them their resources based on what they are lack of : Courses, News RSS, videos, ...
+    * Communication group
+  -->
+  <div class = "blocking" style = "background-color:white; border-radius: 30px; width: 95%;" id="specific">
+    <div class="video-site" id="chartContainer2" style="height: 300px; width: 40%; float: right; right: 90px; top: 40px"></div>
+    <div class = "description" style = "background-color:white; float: left; left: 120px">
+      <p class = "smallfont" style="color: black"> Your profile is </p>
+      <h2 class= "bigfont" style="color: black"><span class="animnum" id="number_per"></span></h2>
+      <p class = "smallfont" style="color: black"> better compared to other
+        <select id="choice-field" onchange="changeNumber()">
+          <option value="none">--Please Select--</option>
+          <option value="finance">Finance</option>
+          <option value="computer">Computer Science</option>
+          <option value="market">Marketing</option>
+          <option value="statistics">Statistics</option>
+          <option value="mathematics">Mathematics</option>
+        </select>
+        candidates</p>
+    </div>
+  </div>
+  <br>
+  <div class = "blocking" style = "background-color:white; border-radius: 30px; width: 95%;
+  display: flex; justify-content: center" id="news-rss">
+    <div id="chartContainer3" style="height: 380px; width: 95%;"></div>
+  </div>
+  <div style="display: flex; justify-content: center">
+    <select id="channels" name="channel"></select>
+    <button onclick="location.href='../landing_page/chatbox.html'"> Open this RSS Channel</button>
+  </div>
+</body>
+</html>
